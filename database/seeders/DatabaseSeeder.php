@@ -28,6 +28,10 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('12345'), 
         ]);
 
-        $this->call(MexicoSeeder::class);
+        $this->call([
+            WorldSeeder::class,
+            MexicoSeeder::class,
+            // Otros seeders que agregues después
+        ]);
     }
 }
